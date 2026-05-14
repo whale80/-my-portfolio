@@ -119,6 +119,7 @@ section{padding:130px 60px}
 .work-empty-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);font-weight:700;text-align:center}
 .work-empty-sub{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;text-align:center}
 .work-card.wide{grid-column:span 2;aspect-ratio:unset;min-height:400px}
+
 /* EXPERIENCE */
 .experience{background:var(--dark)}
 .exp-list{margin-top:70px}
@@ -177,7 +178,6 @@ footer{background:var(--black);padding:40px 60px;display:flex;justify-content:sp
 .footer-links{display:flex;gap:28px}
 .footer-links a{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.3s}
 .footer-links a:hover{color:var(--gold)}
-
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(48px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1)}
 .reveal.in{opacity:1;transform:none}
@@ -208,10 +208,21 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   footer{flex-direction:column;gap:20px;text-align:center}
   .work-header{flex-direction:column;align-items:flex-start;gap:20px}
 }
+
+  /* WORK PROJECT CARDS */
+  .work-project-card{background:var(--panel);display:flex;flex-direction:column;overflow:hidden}
+  .wp-info{padding:32px 32px 24px}
+  .wp-num{font-family:'Space Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:0.2em;margin-bottom:10px}
+  .wp-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);font-weight:700;margin-bottom:6px;line-height:1.2}
+  .wp-role{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--gold2);text-transform:uppercase;margin-bottom:14px}
+  .wp-desc{font-size:13px;color:var(--muted);line-height:1.8}
+  .wp-video{position:relative;width:100%;aspect-ratio:16/9;background:#000;flex-shrink:0}
+  .wp-video iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 </style>
 </head>
 <body>
- <!-- LOADER -->
+
+<!-- LOADER -->
 <div class="loader" id="loader">
   <div class="loader-inner">
     <div class="loader-word">Whaleshot</div>
@@ -314,64 +325,57 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   </div>
   <div class="work-grid reveal">
 
-    <!-- Project 1: Editor 2026 — WHALESHOT -->
-    <div class="work-card" style="aspect-ratio:unset;min-height:420px;background:#000">
-      <iframe
-        src="https://drive.google.com/file/d/1zukeJxiMebourw2Ri_iGh_zMdbyF3f8t/preview"
-        style="position:absolute;inset:0;width:100%;height:100%;border:none;"
-        allow="autoplay; fullscreen"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-      <div class="work-card-body" style="pointer-events:none">
-        <div class="work-card-num">001</div>
-        <div class="work-card-title">Editor — 2026</div>
-        <div class="work-card-role">Whaleshot · Self-Employed · End-to-end Production</div>
+    <!-- 001 -->
+    <div class="work-project-card">
+      <div class="wp-info">
+        <div class="wp-num">001</div>
+        <div class="wp-title">Freelance Cinematographer &amp; Editor — After Hour</div>
+        <div class="wp-role">Whaleshot · Self-Employed · 2026</div>
+        <div class="wp-desc">A short film of an office drama. Assembled footage to build pacing, emotion and story flow. Shaped visual mood and ensured cinematic consistency in post. Colour graded final deliverables for screen.</div>
+      </div>
+      <div class="wp-video">
+        <iframe src="https://drive.google.com/file/d/17cmXPFajM0foReB-fqozZnLDY5juhhER/preview"
+          allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
-      <!-- Project 2: JAPA Short Film -->
-    <div class="work-card" style="aspect-ratio:unset;min-height:420px;background:#000">
-      <iframe
-        src="https://drive.google.com/file/d/17cmXPFajM0foReB-fqozZnLDY5juhhER/preview"
-        style="position:absolute;inset:0;width:100%;height:100%;border:none;"
-        allow="autoplay; fullscreen"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-      <div class="work-card-body" style="pointer-events:none">
-        <div class="work-card-num">002</div>
-        <div class="work-card-title">JAPA — Short Film</div>
-        <div class="work-card-role">Assistant Director · 2026 · Festival Bound</div>
+    <!-- 002 -->
+    <div class="work-project-card">
+      <div class="wp-info">
+        <div class="wp-num">002</div>
+        <div class="wp-title">JAPA — Short Film</div>
+        <div class="wp-role">Assistant Director · 2026 · Festival Bound</div>
+        <div class="wp-desc">AD on JAPA — a Nigerian drama-thriller following three friends navigating desperation and a scam. Responsible for set coordination, scheduling and crew communication across all production days.</div>
+      </div>
+      <div class="wp-video">
+        <iframe src="https://drive.google.com/file/d/1buyRB_n9ySfFM34C-xOgAuaJGc0ZUyAA/preview"
+          allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
- <!-- Project 3: Gaffer — Music Shoot -->
-    <div class="work-card" style="aspect-ratio:unset;min-height:420px;background:#000">
-      <iframe
-        src="https://drive.google.com/file/d/1buyRB_n9ySfFM34C-xOgAuaJGc0ZUyAA/preview"
-        style="position:absolute;inset:0;width:100%;height:100%;border:none;"
-        allow="autoplay; fullscreen"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-      <div class="work-card-body" style="pointer-events:none">
-        <div class="work-card-num">003</div>
-        <div class="work-card-title">Gaffer — Music Shoot</div>
-        <div class="work-card-role">Lighting Department · Commercial Music Video</div>
+    <!-- 003 -->
+    <div class="work-project-card">
+      <div class="wp-info">
+        <div class="wp-num">003</div>
+        <div class="wp-title">Gaffer — Music Shoot</div>
+        <div class="wp-role">Lighting Department · Commercial Music Video · 2026</div>
+        <div class="wp-desc">Responsible for designing and executing the lighting setup on a commercial music video production. Managed the lighting department from rig to wrap.</div>
+      </div>
+      <div class="wp-video">
+        <iframe src="https://drive.google.com/file/d/1zukeJxiMebourw2Ri_iGh_zMdbyF3f8t/preview"
+          allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
-<!-- Project 4: Church Media -->
-    <div class="work-card" style="aspect-ratio:unset;min-height:420px;background:#000">
-      <iframe
-        src="https://drive.google.com/file/d/1hkpsmhPGRwV3U5rjA4YvNDsnBbcWKckc/preview"
-        style="position:absolute;inset:0;width:100%;height:100%;border:none;"
-        allow="autoplay; fullscreen"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-      <div class="work-card-body" style="pointer-events:none">
-        <div class="work-card-num">004</div>
-        <div class="work-card-title">Camera Operator</div>
-        <div class="work-card-role">Celebration Church International · Lagos</div>
+
+    <!-- 004 -->
+    <div class="work-project-card">
+      <div class="wp-info">
+        <div class="wp-num">004</div>
+        <div class="wp-title">Camera Operator &amp; Media Team</div>
+        <div class="wp-role">Celebration Church International · Lagos · 2024</div>
+        <div class="wp-desc">Live broadcast production, camera operation across weekly services and major events — where technical discipline under real-time conditions was first developed. The foundation of everything.</div>
+      </div>
+      <div class="wp-video">
+        <iframe src="https://drive.google.com/file/d/1hkpsmhPGRwV3U5rjA4YvNDsnBbcWKckc/preview"
+          allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
 
@@ -382,15 +386,17 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   <div class="section-tag reveal"><span>03 — Experience</span></div>
   <h2 class="section-title reveal">Where I've<br><em>Worked</em></h2>
   <div class="exp-list">
+
     <div class="exp-row reveal">
       <div class="exp-num">01</div>
       <div>
-        <div class="exp-role">Freelance Cinematographer & Editor — 1 Editor 2026</div>
+        <div class="exp-role">Freelance Cinematographer &amp; Editor</div>
         <div class="exp-co">Whaleshot · Self-Employed</div>
-        <div class="exp-desc">End-to-end production for music videos, short films, BTS and commercial work across Lagos. Shot on Sony FX6, FX3 and Drone. Edited and colour graded in Premiere Pro and DaVinci Resolve.</div>
+        <div class="exp-desc">After Hour — a short film of an office drama. Assembled footage to build pacing, emotion and story flow. Shaped visual mood and ensured cinematic consistency in post. Colour graded final deliverables for screen.</div>
       </div>
-      <div class="exp-date">2026 – Present</div>
+      <div class="exp-date">2026</div>
     </div>
+
     <div class="exp-row reveal">
       <div class="exp-num">02</div>
       <div>
@@ -400,24 +406,27 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
       </div>
       <div class="exp-date">2026</div>
     </div>
+
     <div class="exp-row reveal">
       <div class="exp-num">03</div>
       <div>
-        <div class="exp-role">Editor — Post-Production</div>
-        <div class="exp-co">Short Film</div>
-        <div class="exp-desc">Assembled footage to build pacing, emotion and story flow. Shaped visual mood and ensured cinematic consistency in post. Colour graded final deliverables for screen.</div>
+        <div class="exp-role">Gaffer — Music Shoot</div>
+        <div class="exp-co">Lighting Department · Commercial Music Video</div>
+        <div class="exp-desc">Designed and executed the full lighting setup on a commercial music video. Managed the lighting department from rig to wrap, ensuring cinematic visual consistency throughout.</div>
       </div>
       <div class="exp-date">2026</div>
     </div>
+
     <div class="exp-row reveal">
       <div class="exp-num">04</div>
       <div>
-        <div class="exp-role">Camera Operator & Media Team</div>
+        <div class="exp-role">Camera Operator &amp; Media Team</div>
         <div class="exp-co">Celebration Church International · Lagos</div>
         <div class="exp-desc">Live broadcast production, camera operation across weekly services and major events — where technical discipline under real-time conditions was first developed. The foundation of everything.</div>
       </div>
       <div class="exp-date">Mar 2024 – Present</div>
     </div>
+
   </div>
 </section>
 <!-- EDUCATION -->
@@ -445,6 +454,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     </div>
   </div>
 </section>
+
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-tag reveal"><span>05 — Services</span></div>
@@ -472,6 +482,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     </div>
   </div>
 </section>
+
 <!-- RECOGNITION -->
 <section class="recognition" id="recognition">
   <div class="section-tag reveal"><span>06 — Recognition</span></div>
@@ -560,6 +571,7 @@ if (window.innerWidth > 768) {
     el.addEventListener('mouseleave', () => ring.classList.remove('big'));
   });
 }
+
 // NAV SCROLL
 window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
